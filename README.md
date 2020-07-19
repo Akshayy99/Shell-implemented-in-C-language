@@ -1,13 +1,12 @@
-## HASH SHELL MADE IN C
+# Custom Shell programmed in C
 
-- HASH (Hot-Again Shell)  
+## Description
 
-## AUTHOR: Akshay Kharbanda (20171037)
+This shell has been created using the unix system calls.
+The shell is interactive and can be quit only by typing "quit" in the command prompt.
 
-This shell has been created using system calls.
-The shell is interactive gnland can be quit only by typing "quit" in the command prompt.
+## Features
 
-It can handle the following:-
 - background and foreground processes
 
 - semicolon(;) separated list of commands 
@@ -17,62 +16,102 @@ It can handle the following:-
 - (multiple)piped commands 
 
 - Commands:
-	- cd
-	- pwd
-	- echo
-	- ls (with flags "-a", "-l", and "-la"/"-al")
-	- quit
+```bash
+cd
+```
+```bash
+pwd
+```
+```bash
+echo
+```
+```bash
+ls [-a, -l,-la]
+```
+```bash
+quit
+```
 
 - System commands with or without arguements
 
 - User(self) defined commands:
-	- pinfo
-	- remindme
-	- clock
-	- setenv
-	- unsetenv
-	- jobs
-	- kjob
-	- overkill
-	- bg
-	- fg
+```bash
+pinfo
+```
+```bash
+remindme
+```
+```bash
+clock
+```
+```bash
+setenv
+```
+```bash
+unsetenv
+```
+```bash
+jobs
+```
+```bash
+kjob
+```
+```bash
+overkill
+```
+```bash
+bg
+```
+```bash
+fg
+```
 
 - Signal handling:
-	Signals like ctrl+c and ctrl+z are handled appropriately. The shell can be quit only by typing "quit".
+	Signals like `ctrl+c` and `ctrl+z` are handled appropriately. The shell can be quit only by typing `quit`.
 
 ## Syntax for the user defined commands:
 
 - pinfo:
-	- $ pinfo
-	- $ pinfo <pid>
-
+```bash
+$ pinfo
+$ pinfo <pid>
+```
 - remindme:
-	- $ remindme <time> <reminder>
-
+```bash
+$ remindme <time> <reminder>
+```
 - clock:
-	- $ clock -t <time-step> -n <duration>
-
+```bash
+$ clock -t <time-step> -n <duration>
+```
 - setenv:
-	- $ setenv var [value]
-
+```bash
+$ setenv var [value]
+```
 - unsetenv:
-	- $ unsetenv var
-
+```bash
+$ unsetenv var
+```
 - jobs:
-	- $ jobs
-
+```bash
+$ jobs
+```
 - kjob:
-	- $ kjob <jobNumber> <signalNumber>
-
+```bash
+$ kjob <jobNumber> <signalNumber>
+```
 - overkill:
-	- $ overkill
-
+```bash
+$ overkill
+```
 - fg:
-	- $ fg <jobNumber>
-
+```bash
+$ fg <jobNumber>
+```
 - bg:
-	- $ bg <jobNumber>
-
+```bash
+$ bg <jobNumber>
+```
 ## Working of various modules:
 
 - parse.c :
@@ -88,8 +127,13 @@ It can handle the following:-
 	- contains all the global variables and the function declarations.
 
 
-## RUNNING THE SHELL
+## Usage
 
-Compile using the command: - $ make
-
-Execute using the command: - $ ./makefil
+Compile using the command: 
+```bash
+$ make
+```
+Execute using the command:
+```bash
+$ ./makefil
+```
